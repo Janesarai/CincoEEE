@@ -17,12 +17,12 @@ public class AdapterWord extends RecyclerView.Adapter<AdapterWord.ViewHolder> {
     @Override
     public AdapterWord.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemBinding binding = ItemBinding.inflate(LayoutInflater.from(parent.getContext()));
-        return null;
+        return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AdapterWord.ViewHolder holder, int position) {
-
+        String item = word.get(position);
     }
 
     @Override
@@ -31,8 +31,15 @@ public class AdapterWord extends RecyclerView.Adapter<AdapterWord.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
+        private ItemBinding itemBindingg;
         public ViewHolder(@NonNull ItemBinding binding) {
             super(binding.getRoot());
+            itemBindingg = binding;
+        }
+
+        public void showInfo(String word){
+            itemBindingg.textView.setText(word);
         }
     }
 }
