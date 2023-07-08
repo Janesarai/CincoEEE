@@ -66,6 +66,7 @@ public class FragmentList extends Fragment {
         // Inflate the layout for this fragment
         FragmentListBinding binding = FragmentListBinding.inflate(getActivity().getLayoutInflater());
         AdapterWord adapter = new AdapterWord();
+        adapter.setData(getData());
 
         return binding.getRoot();
     }
