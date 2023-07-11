@@ -32,6 +32,7 @@ public class FragmentList extends Fragment {
     public FragmentList() {
         // Required empty public constructor
     }
+    FragmentListBinding binding;
 
     /**
      * Use this factory method to create a new instance of
@@ -59,6 +60,7 @@ public class FragmentList extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
